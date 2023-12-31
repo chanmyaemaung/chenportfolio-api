@@ -1,6 +1,6 @@
 {
   "name": "chen-portfolio",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "author": "",
   "private": true,
@@ -23,6 +23,7 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "@prisma/client": "^5.7.1",
     "reflect-metadata": "^0.1.13",
