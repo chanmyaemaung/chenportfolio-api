@@ -13,15 +13,21 @@ export class ProfileService {
   }
 
   async findAll(role?: "ADMIN" | "USER") {
-    if (role) return this.databaseService.profile.findMany({ where: { role } });
+    if (role)
+      return this.databaseService.profile.findMany({
+        where: { role },
+      });
 
-    return this.databaseService.profile.findMany();
+    return this.databaseService.profile.findMany({});
   }
 
   async findOne(id: number) {
     return this.databaseService.profile.findUnique({
       where: {
         id,
+      },
+      include: {
+        Project: true,
       },
     });
   }
